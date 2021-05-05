@@ -1,0 +1,73 @@
+.navbar { 
+    background-color: #81a8f8;
+  
+ }
+ li.nav-item {
+     
+    display: inline;
+    min-width: 20vh;
+    font-size: 1em;
+    float:right;
+    
+}
+  a, .navbar-nav, .navbar-light .nav-link {
+    color: #222;
+    align-items: left;
+  }
+  .navbar-brand {
+    font-size: 1.4em;
+    color: #9FFFCB;
+    align-items: center;
+    
+  }
+  .form-center {
+    position: absolute !important;
+    left: 55%;
+    right: 25%;
+  }
+  .userDiv{
+  height: 100vh; 
+  display: flex;
+  margin-top: 10%;
+  }
+  table{
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 10%;
+    border-spacing: 0;
+    width: 90%;
+  }
+  th {
+    background-color: #ddd;
+  }
+  .expenseDetail{
+    height: 100vh; 
+    display: flex;
+    margin-top: 10%;
+  }
+ 
+  .buttonPanel{
+    margin-left: 20%;
+    margin-right: 20%;
+    border-spacing: 0;
+    width: 100%;
+  }
+  table.gridView{
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 10%;
+    border-spacing: 1%;
+    width: 40%;
+  }
+  .container {
+    display: flex;
+  }
+  h1,
+  .btn,
+  #input-field {
+    flex: 1;
+  }
+  .btn_name{
+    margin-left:10px;
+    margin-right:10px;
+}

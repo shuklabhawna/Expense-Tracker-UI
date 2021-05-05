@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import './css/App.css';
+import './css/Styles.css';
+
+import App from "../src/components/App/App";
 import reportWebVitals from './reportWebVitals';
+
+import ExpenseTracker from './components/App/ExpenseTracker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+   <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

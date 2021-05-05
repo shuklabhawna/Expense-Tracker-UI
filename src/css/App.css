@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.App-logo-new {
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,12 +20,23 @@
   }
 }
 
+.App-header-panel {
+  background-color: #81a8f8;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #81a8f8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -35,4 +53,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.wrapper {
+  padding: 20px;
 }
