@@ -3,7 +3,8 @@ import React, { Component } from "react"
 class ExpenseType extends Component{
     state = { 
         isLoading : true,
-        expenseTypes : [] 
+        expenseTypes : [] ,
+        error: ""
     }
 async componentDidMount(){
     const response = await fetch('/expenseTypes/list');
@@ -11,6 +12,7 @@ async componentDidMount(){
     this.setState({expenseTypes : respBody, isLoading: false});
 }
 async deleteData(id){
+    this.setState({error:""});
     await fetch(`/expenseTypes/delete/${id}`, {
         method: "DELETE",
         headers: {
@@ -21,6 +23,14 @@ async deleteData(id){
 
         let updatedExpenseType =[...this.state.expenseTypes].filter( i=> i.id !== id);
         this.setState({expenseTypes: updatedExpenseType});
+      }).catch(error => {
+        if (error.response.errorMessage ) {
+            this.setState({error:"error.response.errorMessage"});
+            
+        }
+        else {
+            this.setState({error: "Something went wrong. Please try again later."});
+             }
       });
       
   };

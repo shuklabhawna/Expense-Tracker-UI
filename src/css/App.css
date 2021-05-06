@@ -3,7 +3,17 @@
 }
 
 .App-logo-new {
-  height: 100vh; /* Magic here */
+  margin-top: 10px;
+  height: 90h; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.App-logo-txt {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #0072ff;
   display: flex;
   justify-content: center;
   align-items: center;

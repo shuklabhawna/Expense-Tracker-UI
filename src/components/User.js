@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 
 
-
-
 class User extends Component{
 
     emptyItem = {
@@ -24,9 +22,16 @@ class User extends Component{
     this.handleChange = this.handleChange.bind(this);
     this.refresh = this.refresh.bind(this);
 }
-    
+ 
+
 async componentDidMount(){
-    const response = await fetch('/users/list');
+    const response = await fetch('/users/list',{
+        method: "GET",
+        headers: {
+        //"Access-Control-Allow-Origin":"*",
+        "content-type": "application/json"
+        }
+    });
     const respBody = await response.json();
     this.setState({users : respBody, isLoading: false});
 }
@@ -56,10 +61,10 @@ async handleSubmit(event){
     if(item["id"]<1){
         alert("Id must be a positive number above 0");
     }else{
-        await fetch(`/users/save`, {
+        await fetch(`/users/save`,{
             method: "POST",
             headers: {
-            
+            //"Access-Control-Allow-Origin":"*",
             "content-type": "application/json"
             },
         
@@ -74,6 +79,7 @@ async deleteUser(id){
     await fetch(`/users/delete/${id}`, {
         method: "DELETE",
         headers: {
+            "Access-Control-Allow-Origin":"*",
             "content-type": "application/json"
             }
       }).then(()=> {

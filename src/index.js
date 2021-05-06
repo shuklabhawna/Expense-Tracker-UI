@@ -3,17 +3,15 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import './css/App.css';
 import './css/Styles.css';
+import App from './Functions/App'
 
-import App from "../src/components/App/App";
 import reportWebVitals from './reportWebVitals';
 
-import ExpenseTracker from './components/App/ExpenseTracker';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-   <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />,
+ document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
